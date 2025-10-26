@@ -1,29 +1,25 @@
-// tsconfig.json
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
+    "target": "ES2020",
     "module": "ESNext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "moduleResolution": "bundler",
-    "strict": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-
-    /* การตั้งค่าสำหรับการย้ายโค้ด (ตาม Checklist) */
+    "noImplicitAny": false,
     "allowJs": true,
-    "checkJs": false,
-
-    /* Alias (ถ้ามี) */
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "checkJs": true,
+    "incremental": true
   },
-  "include": ["src"]
+  "include": ["src/**/*", "types/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
